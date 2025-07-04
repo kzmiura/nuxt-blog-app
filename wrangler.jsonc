@@ -7,6 +7,11 @@
 	"name": "nuxt-blog-app",
 	"main": "./.output/server/index.mjs",
 	"compatibility_date": "2025-07-04",
+	"d1_databases": [{
+		"binding": "DB",
+		"database_name": "blog",
+		"database_id": "4e585e03-137e-4894-84cc-e9d2bfba642a"
+	}],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": "./.output/public/"
