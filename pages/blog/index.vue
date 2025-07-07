@@ -31,7 +31,7 @@
             <p :class="['truncate']">
               {{ post.description }}
             </p>
-            <ul :class="['flex', 'gap-2']">
+            <ul :class="['flex', 'flex-wrap', 'gap-2']">
               <li
                 v-for="tag of post.tags"
                 :key="tag"
