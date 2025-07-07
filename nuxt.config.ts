@@ -1,15 +1,20 @@
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
+
+  modules: [
+    'nitro-cloudflare-dev',
+    '@nuxt/content',
+    '@nuxt/eslint',
+  ],
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
   app: {
     head: {
       titleTemplate: '%s - Self-Executing Anonumous Function',
-    }
+    },
   },
+  css: ['~/assets/css/main.css'],
 
   content: {
     database: {
@@ -18,26 +23,21 @@ export default defineNuxtConfig({
     },
     experimental: { sqliteConnector: 'native' },
   },
-  eslint: {
-    config: {
-      stylistic: {}
-    }
-  },
+  compatibilityDate: '2025-05-15',
   nitro: {
-    preset: "cloudflare_module",
+    preset: 'cloudflare_module',
 
     cloudflare: {
       deployConfig: true,
-      nodeCompat: true
-    }
+      nodeCompat: true,
+    },
   },
   vite: {
     plugins: [tailwindcss()],
   },
-
-  modules: [
-    "nitro-cloudflare-dev",
-    "@nuxt/content",
-    "@nuxt/eslint"
-  ]
+  eslint: {
+    config: {
+      stylistic: {},
+    },
+  },
 })
