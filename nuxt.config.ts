@@ -12,6 +12,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       titleTemplate: '%s - Self-Executing Anonumous Function',
+      htmlAttrs: {
+        lang: 'ja',
+      },
     },
   },
   css: ['~/assets/css/main.css'],

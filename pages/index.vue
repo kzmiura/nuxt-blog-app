@@ -1,3 +1,7 @@
 <template>
-    <h1>Hello, Nuxt3!</h1>
+  <h1>Hello, Nuxt3!</h1>
 </template>
+
+<script lang="ts" setup>
+await navigateTo('/blog')
+</script>

@@ -3,10 +3,16 @@
     <article :class="['bg-white', 'p-8', 'rounded', 'flex-4']">
       <header :class="['mb-4']">
         <div>
-          Published: <NuxtTime :datetime="post!.publishedOn" :date-style="'medium'" />
+          Published: <NuxtTime
+            :datetime="post!.publishedOn"
+            :date-style="'medium'"
+          />
         </div>
         <ul :class="['flex', 'flex-wrap', 'gap-2']">
-          <li v-for="tag of post!.tags" :key="tag">
+          <li
+            v-for="tag of post!.tags"
+            :key="tag"
+          >
             <TagLink :tag="tag" />
           </li>
         </ul>
@@ -32,7 +38,7 @@
               :key="child.id"
               :class="['pl-4']"
             >
-              <NuxtLink :to="{ hash: `#${child.id}` }" >
+              <NuxtLink :to="{ hash: `#${child.id}` }">
                 {{ child.text }}
               </NuxtLink>
             </li>
