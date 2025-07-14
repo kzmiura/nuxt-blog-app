@@ -1,13 +1,13 @@
 <template>
-  <div :class="['lg:flex', 'gap-8']">
+  <div :class="['flex', 'flex-col-reverse', 'lg:flex-row', 'gap-8']">
     <ContentRenderer
       :value="post!"
       :prose="false"
       :class="['bg-white', 'p-8', 'rounded', 'prose', 'md:prose-lg', 'lg:prose-xl', 'xl:prose-2xl']"
       tag="article"
     />
-    <div>
-      <header :class="['mb-4']">
+    <div :class="['*:mb-4']">
+      <header>
         <div>details</div>
         <div>
           Published:
