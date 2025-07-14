@@ -1,10 +1,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@utility prose {
+/* @utility prose {
     code {
         &::before, &::after {
             content: none;
         }
     }
-}
+} */
