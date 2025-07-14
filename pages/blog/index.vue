@@ -8,7 +8,10 @@
         <h2 :class="['text-3xl', 'font-bold', 'mb-4']">
           Posts
         </h2>
-        <div :class="['grid', 'grid-cols-2', 'gap-4']">
+        <div
+          v-if="posts?.length"
+          :class="['grid', 'grid-cols-2', 'gap-4']"
+        >
           <div
             v-for="post of posts"
             :key="post.id"
@@ -40,6 +43,9 @@
               </li>
             </ul>
           </div>
+        </div>
+        <div v-else>
+          <p>Posts not found</p>
         </div>
       </div>
       <div :class="['flex-1']">

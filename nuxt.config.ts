@@ -25,6 +25,13 @@ export default defineNuxtConfig({
       bindingName: 'DB',
     },
     experimental: { sqliteConnector: 'native' },
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark',
+        },
+      },
+    },
   },
   compatibilityDate: '2025-05-15',
   nitro: {

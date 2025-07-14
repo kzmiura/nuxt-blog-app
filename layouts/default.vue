@@ -17,6 +17,13 @@
           Blog
         </NuxtLink>
       </div>
+      <div>
+        <NuxtLink
+          to="https://github.com/kzmiura/nuxt-blog-app"
+        >
+          Repo
+        </NuxtLink>
+      </div>
     </header>
     <main :class="['flex-auto', 'container', 'mx-auto', 'p-4']">
       <slot />
