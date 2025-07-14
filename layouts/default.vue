@@ -20,6 +20,7 @@
       <div>
         <NuxtLink
           to="https://github.com/kzmiura/nuxt-blog-app"
+          :class="['font-semibold', 'hover:underline']"
         >
           Repo
         </NuxtLink>
