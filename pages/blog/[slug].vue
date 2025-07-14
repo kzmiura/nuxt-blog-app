@@ -23,7 +23,7 @@
         :class="['prose', 'sm:prose-sm', 'lg:prose-lg', 'xl:prose-xl', '2xl:prose-2xl']"
       />
     </article>
-    <nav :class="['flex-1']">
+    <nav :class="['flex-1', 'sticky', 'h-min', 'top-4']">
       <ul>
         <li
           v-for="link of post?.body.toc?.links"
