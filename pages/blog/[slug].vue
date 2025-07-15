@@ -3,7 +3,7 @@
     <ContentRenderer
       :value="post!"
       :prose="false"
-      :class="['bg-white', 'p-8', 'rounded', 'prose', 'md:prose-lg', 'lg:prose-xl']"
+      :class="['bg-white', 'p-8', 'rounded', 'prose', 'prose-sm', 'md:prose-base']"
       tag="article"
     />
     <div :class="['*:mb-4']">
