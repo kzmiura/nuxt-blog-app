@@ -90,6 +90,7 @@ const { data: tags } = await useAsyncData(
   'tags',
   async () => {
     const posts = await queryCollection('posts')
+      .where('draft', '=', false)
       .select('tags')
       .all()
     const tagMap: Map<string, number> = new Map()
