@@ -69,10 +69,11 @@
 
 <script lang="ts" setup>
 const route = useRoute()
+
 const { data: posts } = await useAsyncData(
   () => `posts:${route.query.tag && typeof route.query.tag === 'object' ? route.query.tag.join(':') : route.query.tag ?? 'all'}`,
   () => {
-    let builder = queryCollection('posts')
+    let builder = queryCollection('posts').where('draft', '=', false)
     if (route.query.tag && typeof route.query.tag === 'object') {
       for (const tag of route.query.tag) {
         builder = builder.where('tags', 'LIKE', `%"${tag}"%`)
@@ -91,7 +92,7 @@ const { data: tags } = await useAsyncData(
     const posts = await queryCollection('posts')
       .select('tags')
       .all()
-    const tagMap = new Map<string, number>()
+    const tagMap: Map<string, number> = new Map()
     for (const tag of posts.flatMap(post => post.tags ?? [])) {
       tagMap.set(tag, (tagMap.get(tag) ?? 0) + 1)
     }

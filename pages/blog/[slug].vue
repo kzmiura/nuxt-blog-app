@@ -57,7 +57,10 @@
 const route = useRoute()
 const { data: post } = await useAsyncData(
   route.path,
-  () => queryCollection('posts').path(route.path).first(),
+  () => queryCollection('posts')
+    .path(route.path)
+    .where('draft', '=', false)
+    .first(),
 )
 
 if (!post.value) {

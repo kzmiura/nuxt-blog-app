@@ -11,6 +11,7 @@ export default defineContentConfig({
         tags: z.string().array().optional(),
         publishedOn: z.string().date(),
         updatedOn: z.string().date().optional(),
+        draft: z.boolean().default(false),
       }),
     }),
   },
